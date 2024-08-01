@@ -1,11 +1,9 @@
-import express, { Express, Request, Response } from 'express'
+import express, { Express } from 'express'
 import path from 'path'
 import cors from 'cors'
 import passport from 'passport'
 import cookieParser from 'cookie-parser'
-import compression from 'compression' 
-import jwt from 'jsonwebtoken';
-import { BearerStrategy, ITokenPayload, VerifyCallback } from 'passport-azure-ad'
+import compression from 'compression'
 import _ from 'lodash'
 
 import config from './config.json'

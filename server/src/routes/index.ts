@@ -1,4 +1,4 @@
-import { database, passport } from "../app";
+import { database } from "../app";
 import express, { Request, Response } from "express";
 import path from "path";
 import { getLogsByOperationId, getOperationIds, getOperationNames, UTC_Timestamps } from "../controllers/azure/applicationInsights";

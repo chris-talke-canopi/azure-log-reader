@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node app.js",
     "dev": "nodemon --exec \"npm run script:dev\"",
     "build" : "npx tsc --project tsconfig.json",
     "script:dev": "npx ts-node src/app.ts"

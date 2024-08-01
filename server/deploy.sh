@@ -7,7 +7,7 @@ host=docker.canopi.com.au
 git archive -o app.tar.gz main
 
 # Transfer Files to said folder '~/auto-deploy'
-scp app.tar.gz .env $user@$host:~/auto-deploy
+scp app.tar.gz $user@$host:~/auto-deploy
 
 ssh $user@$host << EOF
   cd ~/auto-deploy
