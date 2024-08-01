@@ -10,6 +10,7 @@ WORKDIR /app
 RUN mkdir -p /app/bin
 COPY --from=builder /app/dist ./
 COPY --from=builder /app/src/database/migrations ./database/migrations
+COPY --from=builder /app/src/public/ ./public
 COPY --from=builder /app/package*.json ./
 RUN npm install --only=production
 EXPOSE 7878
