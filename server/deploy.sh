@@ -22,7 +22,7 @@ ssh $user@$host << EOF
     
   docker run \
     --name azure_log_reader \
-    -v ~/DATA/azure_log_reader:/app/dist/bin \
+    -v ~/DATA/azure_log_reader:/app/bin \
     -dit \
     --restart=unless-stopped \
     canopi/azure_log_reader:latest
