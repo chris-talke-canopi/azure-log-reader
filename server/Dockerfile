@@ -13,4 +13,4 @@ COPY --from=builder /app/package*.json ./
 RUN npm install --only=production
 RUN mkdir -p /app/bin
 EXPOSE 7878
-CMD ["node", "dist/app.js"]
+CMD ["node", "app.js"]
