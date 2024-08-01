@@ -1,0 +1,6 @@
+{
+    "port" : 7878,
+    "AZURE_TENANT_ID":"b73d43fc-a438-40e8-809d-0d591fad6e5c",
+    "AZURE_CLIENT_ID":"b61c9a95-25eb-468b-9ee4-cc63468d67b9",
+    "AZURE_APP_ID": "b61c9a95-25eb-468b-9ee4-cc63468d67b9"
+}
