@@ -14,8 +14,8 @@ ssh $user@$host << EOF
   tar xvzf app.tar.gz
 
   # Cleanup if exists
-#   docker container rm -f azure_log_reader
-#   docker image rm -f canopi/azure_log_reader:latest
+  docker container rm -f azure_log_reader
+  docker image rm -f canopi/azure_log_reader:latest
 
   # Build, Remove and Deploy Container
   docker build --no-cache -t canopi/azure_log_reader:latest .
@@ -23,7 +23,6 @@ ssh $user@$host << EOF
   docker run \
     --name azure_log_reader \
     -v ~/DATA/azure_log_reader:/app/dist/bin \
-    -p 7878:7878 \
     -dit \
     --restart=unless-stopped \
     canopi/azure_log_reader:latest
