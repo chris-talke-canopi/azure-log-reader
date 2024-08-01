@@ -22,7 +22,6 @@ ssh $user@$host << EOF
     
   docker run \
     --name azure_log_reader \
-    -p 7878:7878 \
     -v ~/DATA/azure_log_reader:/app/bin \
     -dit \
     --restart=unless-stopped \
