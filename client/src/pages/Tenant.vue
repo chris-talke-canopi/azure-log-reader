@@ -50,6 +50,7 @@
                 </button>
             </div>
         </div>
+
         <div id="main" >
             <section class="bg-white bg-clip-border drop-shadow-xl border">
                 <table class="w-full text-sm text-left text-gray-500">
@@ -93,6 +94,10 @@
                 {{ operationIds.tables[0].rows.length }} Reports
             </div>
         </div>
+
+        <aside id="sandwhich">
+            <CreateTenant />
+        </aside>
     </div>
 </template>
 
@@ -103,6 +108,7 @@ import { RouterLink, useRoute } from 'vue-router';
 import { AzureLogResponse } from '../../../server/src/controllers/azure/applicationInsights';
 import { api } from '../api';
 import { getStartOfDay } from '../utils/helpers';
+import CreateTenant from '../components/CreateTenant.vue';
 
 const route = useRoute();
 
@@ -262,5 +268,9 @@ function shareLink() {
 
 .constrain {
     height: max-content;
+}
+
+aside {
+    
 }
 </style>

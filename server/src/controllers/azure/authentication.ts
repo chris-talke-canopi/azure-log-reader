@@ -30,7 +30,8 @@ export function isAuthenticated(req: Request, res: Response, next: NextFunction)
 
     jwt.verify(token, getKey, {
         audience: `api://${AZURE_CLIENT_ID}`,
-        issuer: `https://sts.windows.net/${AZURE_TENANT_ID}/`
+        issuer: `https://sts.windows.net/${AZURE_TENANT_ID}/`,
+        maxAge: '48h'
     }, (err, decoded) => {
         if (err) {
             console.error(err)
